@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:hint="Math Quiz!">
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:id="@+id/numberBox">
+        </EditText>
+
+        <Button
+            android:id="@+id/factorialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Factorial"
+            android:textSize="24dp">
+        </Button>
+
+        <Button
+            android:id="@+id/cubeRootButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cube Root"
+            android:textSize="24dp">
+        </Button>
+
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:text="">
+        </TextView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
