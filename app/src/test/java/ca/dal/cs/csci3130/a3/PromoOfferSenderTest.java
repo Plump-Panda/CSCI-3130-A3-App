@@ -23,6 +23,13 @@ public class PromoOfferSenderTest {
     @BeforeClass
     public static void setup() {
         //mock the IPromoOffer interface
+        firstOffer = Mockito.mock(IPromoOffer.class);
+        Mockito.when(firstOffer.getOffer()).thenReturn("This is a cool offer!");
+        Mockito.when(firstOffer.getExpiredDate()).thenReturn("2022-04-30");
+        Mockito.when(firstOffer.getDiscountRate()).thenReturn(10);
+        secondOffer = Mockito.mock(IPromoOffer.class);
+        Mockito.when(secondOffer.getOffer()).thenReturn(null);
+        Mockito.when(secondOffer.getExpiredDate()).thenReturn("2022-01-05");
     }
 
     @Test
