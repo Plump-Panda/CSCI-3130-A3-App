@@ -4,9 +4,7 @@ public class Customer {
 
     private String firstName;
     private String lastName;
-    private int areaCode;
-    private int loyaltyCardNumber;
-    private int points;
+    private LoyaltyCard loyaltyCard;
 
 
     public Customer(String firstName, String lastName) {
@@ -14,23 +12,21 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public void setLoyaltyCard(int areaCode, int cardNumber, int points){
+        loyaltyCard = new LoyaltyCard(areaCode, cardNumber, points);
+    }
+
     public String getFullName() {
         return this.firstName + " " + this.lastName;
     }
 
-    public void setLoyaltyCard(int areaCode, int cardNumber, int points) {
-        this.areaCode = areaCode;
-        this.loyaltyCardNumber = cardNumber;
-        this.points = points;
-    }
-
     public String getFullCardNumber() {
         String formattedNumber = new String();
-        formattedNumber = this.areaCode + "-" + this.loyaltyCardNumber;
+        formattedNumber = loyaltyCard.getAreaCode() + "-" + loyaltyCard.getLoyaltyCardNumber();
         return formattedNumber;
     }
 
     public int getLoyaltyPoints() {
-        return this.points;
+        return loyaltyCard.getPoints();
     }
 }
