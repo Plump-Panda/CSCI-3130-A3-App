@@ -7,4 +7,7 @@ public class SmallTask extends Item {
         return "Walk a dog";
     }
 
+    public int getDuration() {
+        return 1;
+    }
 }

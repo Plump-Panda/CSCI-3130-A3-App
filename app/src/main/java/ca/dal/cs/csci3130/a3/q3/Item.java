@@ -9,18 +9,6 @@ public class Item {
         return 25;
     }
 
-    public int getManufacturingYear() {
-        return 2019;
-    }
-
-    public int getDuration() {
-        return 1;
-    }
-
-    public String getManufacturer() {
-        return "Lenovo";
-    }
-
     public String getItemLocation() {
         return "Halifax";
     }
