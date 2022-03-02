@@ -3,7 +3,10 @@ package ca.dal.cs.csci3130.a3;
 import org.junit.Test;
 
 import ca.dal.cs.csci3130.a3.q2.AccessLevel;
+import ca.dal.cs.csci3130.a3.q2.Admin;
 import ca.dal.cs.csci3130.a3.q2.AppUser;
+import ca.dal.cs.csci3130.a3.q2.Buyer;
+import ca.dal.cs.csci3130.a3.q2.Seller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -15,7 +18,7 @@ public class AppUserTest {
     @Test
     public void testBuyerAccess() {
         //new constructor is allowed
-        AppUser appUser = new AppUser("buyer");
+        AppUser appUser = new Buyer("buyer");
         appUser.setAccessLevel();
         assertEquals(AccessLevel.buyerAccessLevel, appUser.getAccessLevel());
         assertTrue(appUser.canPlaceOnlineOrder());
@@ -26,7 +29,7 @@ public class AppUserTest {
     @Test
     public void testSellerAccess() {
         //new constructor is allowed
-        AppUser appUser = new AppUser("seller");
+        AppUser appUser = new Seller("seller");
         appUser.setAccessLevel();
         assertEquals(AccessLevel.sellerAccessLevel, appUser.getAccessLevel());
         assertTrue(appUser.canPlaceOnlineAd());
@@ -37,7 +40,7 @@ public class AppUserTest {
     @Test
     public void testAdminAccess() {
         //new constructor is allowed
-        AppUser appUser = new AppUser("admin");
+        AppUser appUser = new Admin("admin");
         appUser.setAccessLevel();
         assertEquals(AccessLevel.adminAccessLevel, appUser.getAccessLevel());
         assertTrue(appUser.hasAdminAccess());
@@ -48,9 +51,9 @@ public class AppUserTest {
     @Test
     public void testAllUserAccess() {
         //new constructors are allowed
-        AppUser appUser1 = new AppUser("buyer");
-        AppUser appUser2 = new AppUser("seller");
-        AppUser appUser3 = new AppUser("admin");
+        AppUser appUser1 = new Buyer("buyer");
+        AppUser appUser2 = new Seller("seller");
+        AppUser appUser3 = new Admin("admin");
         appUser1.setAccessLevel();
         appUser2.setAccessLevel();
         appUser3.setAccessLevel();
