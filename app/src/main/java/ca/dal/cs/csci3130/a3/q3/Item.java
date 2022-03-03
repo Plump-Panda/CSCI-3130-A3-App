@@ -5,10 +5,6 @@ public class Item {
         return "Item";
     }
 
-    public int getCompensation() {
-        return 25;
-    }
-
     public String getItemLocation() {
         return "Halifax";
     }

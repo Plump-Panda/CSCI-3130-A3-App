@@ -10,4 +10,8 @@ public class SmallTask extends Item {
     public int getDuration() {
         return 1;
     }
+
+    public int getCompensation() {
+        return 25;
+    }
 }
